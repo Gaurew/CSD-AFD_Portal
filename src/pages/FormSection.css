@@ -1,0 +1,64 @@
+/* FormSection.css */
+.form-section {
+    padding: 50px 0;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 3rem;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-group input {
+    border-radius: 25px;
+    padding: 15px;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    color: #adb5bd;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .form-group input:focus + .form-label,
+  .form-group input:not(:placeholder-shown) + .form-label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(0);
+    color: #6c757d;
+  }
+  
+  .btn-floating {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dee2e6;
+    color: #212529;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-floating:hover {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  /* Center the "Sign up with" buttons */
+  .text-center {
+    display: flex;
+    justify-content: center;
+  }
+  

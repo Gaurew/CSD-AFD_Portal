@@ -1,0 +1,18 @@
+.btn-primary-btn-lg-1 {
+    padding-left: 30px;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: -85vh;
+    background-color: #12457f;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-primary-btn-lg-1:hover {
+    background-color: #2e87c0;
+  }

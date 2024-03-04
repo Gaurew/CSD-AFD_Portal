@@ -1,0 +1,59 @@
+.image-4-icon,
+.image-5-icon,
+.image-6-icon,
+.image-7-icon {
+  position: absolute;
+  height: 59.6%;
+  width: 18.94%;
+  top: 28.47%;
+  right: 81.06%;
+  bottom: 11.94%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.image-5-icon,
+.image-6-icon,
+.image-7-icon {
+  height: 86.77%;
+  width: 13.9%;
+  top: 6.69%;
+  right: 58.8%;
+  bottom: 6.53%;
+  left: 27.3%;
+}
+.image-6-icon,
+.image-7-icon {
+  height: 100%;
+  width: 25.82%;
+  top: 0;
+  right: 25.82%;
+  bottom: 0;
+  left: 48.36%;
+}
+.image-7-icon {
+  height: 50.32%;
+  width: 19.95%;
+  top: 33.06%;
+  right: 0;
+  bottom: 16.61%;
+  left: 80.05%;
+}
+.image-4-parent {
+  position: absolute;
+  height: 100.32%;
+  width: 99.93%;
+  top: 0;
+  right: 0.07%;
+  bottom: -0.32%;
+  left: 0;
+}
+.group-div {
+  position: absolute;
+  top: 6px;
+  left: 1049px;
+  width: 426.3px;
+  height: 123.6px;
+}

@@ -1,0 +1,8 @@
+.text-center1{
+    font-family: var(--font-open-sans);
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 92vh;
+}
