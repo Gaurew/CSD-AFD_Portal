@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import './NewProduct.css';
 import vehicleData from '../../Assets/Vehicle';
 import Item from '../Item/Item';
-
 const NewPros = () => {
-  // State variables for color and price range selection
+  
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('');
 
-  // Filtered vehicle data based on color and price range
+
   const filteredData = vehicleData.filter(item => {
     return (
       (selectedColor === '' || item.color.includes(selectedColor)) &&
@@ -19,7 +18,7 @@ const NewPros = () => {
   return (
     <div className='new'>
       <div className="filters-container">
-        {/* Color selection filter */}
+        
         <div className="color-filter">
           <h4>Color Filter:</h4>
           <select value={selectedColor} onChange={e => setSelectedColor(e.target.value)}>
@@ -27,11 +26,11 @@ const NewPros = () => {
             <option value="Black">Black</option>
             <option value="White">White</option>
             <option value="Blue">Blue</option>
-            {/* Add more color options as needed */}
+            
           </select>
         </div>
 
-        {/* Price selection filter */}
+        
         <div className="price-filter">
           <h4>Price Filter:</h4>
           <select value={selectedPriceRange} onChange={e => setSelectedPriceRange(e.target.value)}>
@@ -46,7 +45,6 @@ const NewPros = () => {
       </div>
 
       <div className="collections">
-        {/* Render filtered items */}
         {filteredData.map((item, i) => (
           <Item key={i} id={item.id} name={item.name} image={item.image} price={item.price} transmission={item.transmission} color={item.color} />
         ))}

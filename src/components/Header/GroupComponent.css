@@ -42,16 +42,17 @@
   left: 80.05%;
 }
 .image-4-parent {
-  position: absolute;
-  height: 100.32%;
+  
+  height: 100%;
   width: 99.93%;
   top: 0;
-  right: 0.07%;
-  bottom: -0.32%;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
   left: 0;
 }
 .group-div {
-  position: absolute;
+  position: relative;
   top: 6px;
   left: 1049px;
   width: 426.3px;

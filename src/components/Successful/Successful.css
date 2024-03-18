@@ -1,0 +1,12 @@
+body{
+
+    background-color: #ffffff;
+}
+
+.container1{
+    font-family: var( --font-open-sans);
+    height: 100vh;
+
+}
+
+

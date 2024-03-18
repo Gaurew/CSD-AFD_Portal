@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Item.css'; // Import your CSS file
+import './Item.css'; 
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 const Item = (props) => {
   return (
@@ -13,8 +13,7 @@ const Item = (props) => {
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item"><h6>Price: &#8377;{props.price}</h6></li>
-        <li className="list-group-item">Transmission: {props.transmission}</li>
-        <li className="list-group-item">Color: {props.color}</li>
+        
       </ul>
     </div>
   );

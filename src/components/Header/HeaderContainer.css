@@ -37,6 +37,9 @@
   padding: 12.916667938232422px 32.29166793823242px;
   box-sizing: border-box;
 }
+.btn-login:hover{
+  background-color: rgb(156, 141, 0);
+}
 .btn,
 .btn-login,
 .header {
@@ -71,4 +74,5 @@
   font-size: var(--font-size-3xl-6);
   color: var(--white);
   font-family: var(--font-inter);
+  padding: 12.916667938232422px 5%;
 }

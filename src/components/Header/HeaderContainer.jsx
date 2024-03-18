@@ -12,7 +12,6 @@ const HeaderContainer = () => {
       <div className="header-child" />
       <div className="btn">
         <div className="btn-login">
-          {/* Add custom styles to the Link component */}
           <div className="sign-up">
             <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
               Sign Up

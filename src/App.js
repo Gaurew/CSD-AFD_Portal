@@ -1,13 +1,12 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; 
 import Desktop from "./pages/Desktop";
 import LoginSignup from "./pages/LoginSignup";
 import Inventory from "./pages/Inventory";
 import Product from "./pages/Product";
+import Successful from "./components/Successful/Successful";
 import ProductDisplay from "./components/ProductDisplay/ProductDisplay";
 import Cart from "./components/Cart/Cart";
-
 function App() {
   return (
     <Router> 
@@ -20,6 +19,7 @@ function App() {
           <Route path="/product/:id" component={ProductDisplay} />
           <Route path="/product" component={Product} />
           <Route path="/cart" component={Cart} /> 
+          <Route path ="/buy" component= {Successful}/>
         </Switch>
       </div>
     </Router>

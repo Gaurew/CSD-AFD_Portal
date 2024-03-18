@@ -4,12 +4,12 @@ import vehicleData from  '../Assets/Car'
 import Item from '../components/Item/Item';
 import Navbar from '../components/Navbar/Navbar';
 import './Product.css'
+import './Desktop.css'
 const Product = () => {
-  // State variables for color and price range selection
+  
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('');
 
-  // Filtered vehicle data based on color and price range
   const filteredData = vehicleData.filter(item => {
     return (
       (selectedColor === '' || item.color.includes(selectedColor)) &&
@@ -23,7 +23,7 @@ const Product = () => {
       <h3 className='text-center1'>Explore Our Wheels</h3>
       <div className='new'>
       <div className="filters-container">
-        {/* Color selection filter */}
+        
         <div className="color-filter">
           <h4>Color Filter:</h4>
           <select value={selectedColor} onChange={e => setSelectedColor(e.target.value)}>
@@ -31,11 +31,10 @@ const Product = () => {
             <option value="Black">Black</option>
             <option value="White">White</option>
             <option value="Blue">Blue</option>
-            {/* Add more color options as needed */}
+            
           </select>
         </div>
 
-        {/* Price selection filter */}
         <div className="price-filter">
           <h4>Price Filter:</h4>
           <select value={selectedPriceRange} onChange={e => setSelectedPriceRange(e.target.value)}>
@@ -50,12 +49,50 @@ const Product = () => {
       </div>
 
       <div className="collections">
-        {/* Render filtered items */}
+       
         {filteredData.map((item, i) => (
           <Item key={i} id={item.id} name={item.name} image={item.image} price={item.price} transmission={item.transmission} color={item.color} />
         ))}
       </div>
     </div>
+    <div className="div-31">
+          Copyrights © CSD India 2020. All Rights Reserved.&nbsp;&nbsp;&nbsp;
+          <a
+            href="https://csdindia.gov.in/privacypolicy.html"
+            className="footer-link"
+            target="_blank"
+            style={{textDecoration: 'none', color: 'inherit' }}
+          >
+            Privacy Policy&nbsp;&nbsp;&nbsp;
+          </a>
+           
+          <a
+            style={{textDecoration: 'none', color: 'inherit' }}
+            href="https://csdindia.gov.in/disclaimer.html"
+            className="footer-link"
+            
+          >
+            &nbsp;Disclaimer&nbsp;&nbsp;&nbsp;
+          </a>
+           
+          <a
+            href="https://csdindia.gov.in/faq.html"
+            className="footer-link"
+            target="_blank"
+            style={{textDecoration: 'none', color: 'inherit' }}
+          >
+            FAQ&nbsp;&nbsp;&nbsp;
+          </a>
+           
+          <a
+            style={{textDecoration: 'none', color: 'inherit' }}
+            href="https://csdindia.gov.in/feedback.aspx"
+            className="footer-link"
+            target="_blank"
+          >
+            Feedback&nbsp;&nbsp;&nbsp;
+          </a>
+        </div>
     </div>
   );
 };

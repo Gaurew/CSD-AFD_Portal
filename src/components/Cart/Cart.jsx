@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import './Cart.css'
+import Footer from '../Footer/Footer';
+import './Cart.css';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 const Cart = () => {
-    const location = useLocation();
-    const product = location.state && location.state.product;
+  const location = useLocation();
+  const [product, setProduct] = useState(null);
 
-    if (!product) {
-        return (
-            <div>
-                <h1>Cart Page</h1>
-                <p>No product data found</p>
-            </div>
-        );
+  // Update product state when location state changes
+  useEffect(() => {
+    if (location.state && location.state.product) {
+      setProduct(location.state.product);
     }
+  }, [location.state]);
+
+  if (!product) {
     return (
-        <div>
+      <div>
+        <Navbar />
+        <h1>Cart Page</h1>
+        <p>No product data found</p>
+        <Footer />
+      </div>
+    );
+  }
+
+  return (
+    <div>
             <Navbar />
             <section className="h-100 gradient-custom">
                 <div className="container py-5">
@@ -44,7 +56,7 @@ const Cart = () => {
                                             <div className="d-flex mb-4" style={{ maxWidth: '300px' }}>
 
                                                 <div className="form-outline">
-                                                    <input id="form1" min="0" name="quantity" defaultValue="1" type="number" className="form-control" />
+                                                    <input id="form1" min="1" name="quantity" defaultValue="1" type="number" className="form-control" />
                                                     <label className="form-label" htmlFor="form1">Quantity</label>
                                                 </div>
 
@@ -85,12 +97,17 @@ const Cart = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className='btn-primary-btn-lg-1'>Buy</button>
+                        
                     </div>
                 </div>  
             </section>
+            <Link to="/buy"><button className='Buttoni'>Place Order</button></Link>
+           <div className="foot" style={{marginTop:"125px"}}>
+           <Footer/>
+           </div>
         </div>
-    );
+  );
 };
 
 export default Cart;
+
